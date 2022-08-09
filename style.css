@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+body {
+    background-color: lightsteelblue;
+    padding: 10px;
+}
+
+h1 {
+    color: orangered;
+}
+
+.my-google-tables {
+    padding: 10px;
+}
+
+.my-table{
+    border-radius: 5px;
+}
+
+.my-table tr:nth-child(2n) {
+    background-color: wheat !important;
+}
+
+.my-table tr:nth-child(2n+1) {
+    background-color: yellowgreen !important;
+}
+
+.my-table tr:nth-child(1) {
+    background-color: orange !important;
+    color: green;
+    text-align: center;
+}
+
+.my-table td{
+    padding: 5px;
+    text-align: center;
+}
