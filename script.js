@@ -5,6 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let googleMessBtn = document.querySelector('.get-message');
     let googleMessage = document.querySelector('.my-google-message');
 
+    let form = document.querySelector('.main-form');
+    let submit = document.querySelector('.btn-get');
+
+
+
     let allData = [];
     let allRowsArr = [];
     let mainArr = [];
@@ -81,22 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
         JSON.stringify(fullResult);
         console.log(fullResult);
 
-        let myObj = {
-            name: 'Judy',
-            age: 29,
-            phone: 380647826013,
-            message: 'My name is Judy'
-        }
+    })
 
-        fetch('https://script.google.com/macros/s/AKfycbwJT_TUVszgps-x6KhEgYtfSjKHy_Ji7SFY61zD1Mk9F7mhWBY67YCKWmt9189GqOPW/exec', {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Accept' : 'application/json'
-            },
-            method: 'POST',
-            body: JSON.stringify(myObj)
-        }).then(resp => resp.json())
-            .then(r => console.log(r))
+    submit.addEventListener('click', () => {
+        form.submit();
+        alert('hello')
+        window.open('https://stanislav-gupalyuk.github.io/index.html');
+
 
     })
     console.log(mainArr);
